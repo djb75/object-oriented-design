@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace object_oriented_design
 {
-    public class ListingArchive
+    public class ListingArchive //Inheritance
     {
         // As you complete each task make sure you test your code carefully
         // Choose some combination of manual testing, Debug.Assert and unit tests
@@ -25,7 +25,7 @@ namespace object_oriented_design
         double discount;
 
         //Constructor
-        public Listing()
+        public ListingArchive()
         {
             productID = 0;
             productName = string.Empty;

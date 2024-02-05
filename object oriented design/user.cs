@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace object_oriented_design
 {
-    public class User
+    public class User   //Association
     {
         // As you complete each task make sure you test your code carefully
         // Choose some combination of manual testing, Debug.Assert and unit tests
