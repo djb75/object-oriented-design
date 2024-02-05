@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpObjectIntro.Classes.BankAccount
+namespace object_oriented_design
 {
-    public class Listing
+    public class ListingArchive
     {
         // As you complete each task make sure you test your code carefully
         // Choose some combination of manual testing, Debug.Assert and unit tests
@@ -31,7 +28,7 @@ namespace CSharpObjectIntro.Classes.BankAccount
         public Listing()
         {
             productID = 0;
-            productName = string.Empty; 
+            productName = string.Empty;
             price = 0;
             description = string.Empty;
             quantity = 0;
