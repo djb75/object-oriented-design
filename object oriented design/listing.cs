@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace object_oriented_design
 {
-    public class Listing
+    public abstract class Listing
     {
         // As you complete each task make sure you test your code carefully
         // Choose some combination of manual testing, Debug.Assert and unit tests
@@ -26,9 +26,11 @@ namespace object_oriented_design
         string description;
         int quantity;
         double discount;
+        bool activeStatus;
+        DateTime dateSold;
 
         //Constructor
-        public Listing()
+        public Listing(bool activestatus, DateTime? datesold)
         {
             productID = 0;
             productName = string.Empty; 
@@ -36,6 +38,11 @@ namespace object_oriented_design
             description = string.Empty;
             quantity = 0;
             discount = 0;
+            activeStatus = activestatus;
+            if (activeStatus)
+            {
+                dateSold = datesold;
+            }
         }
 
         //Properties
@@ -83,5 +90,6 @@ namespace object_oriented_design
             price *= 1 - discount;
             return price;
         }
+        public abstract bool CanShowListing();
     }
 }

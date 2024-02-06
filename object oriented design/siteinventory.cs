@@ -17,7 +17,7 @@ namespace object_oriented_design
         // It should have methods to deposit and withdraw/make payments from the account. 
 
         //Fields
-        List<Listing> activelistings;
+        List<ActiveListing> activelistings;
         List<ListingArchive> pastlistings;
         int numactivelistings;
         int numpastlistings;
@@ -25,14 +25,14 @@ namespace object_oriented_design
         //Constructor
         public SiteInventory()
         {
-            activelistings = new List<Listing>();
+            activelistings = new List<ActiveListing>();
             pastlistings = new List<ListingArchive>();
             numpastlistings = 0;
             numactivelistings = 0;
         }
 
         //Properties
-        public List<Listing> Listings 
+        public List<ActiveListing> Listings 
         { 
             get { return activelistings; }
             set { activelistings = value; }
@@ -51,18 +51,18 @@ namespace object_oriented_design
         public int NumPastListings
         {
             get { return numpastlistings; }
-            set { numpastlistings = value;}
+            set { numpastlistings = value; }
         }
 
         //Methods
-        public void Bought(Listing item)
+        public void Bought(ActiveListing item)
         {
             throw new NotImplementedException();
             //Takes attributes from active Listing and creates a new ListingArchive adding DateTime.Now() as the date bought and the user
             //Removes the Listing from activelistings and adds the archive to pastlistings
         }
 
-        public void AddListing(Listing item)
+        public void AddListing(ActiveListing item)
         {
             throw new NotImplementedException();
             //Adds Listing to activelistings
@@ -71,7 +71,7 @@ namespace object_oriented_design
         public void DisplayListings()
         {
             throw new NotImplementedException();
-            //Displays all listings
+            //Displays all listings where Listing.CanShowListing() == true
         }
     }
 }

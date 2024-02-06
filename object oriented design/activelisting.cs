@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace object_oriented_design
 {
-    public class ListingArchive : Listing //Inheritance
+    public class ActiveListing : Listing  //Inheritance
     {
-        public ListingArchive() : base(false, DateTime.Now) { }
+        public ActiveListing() : base(true, null) { }
         //Methods
         public override bool CanShowListing()
         {

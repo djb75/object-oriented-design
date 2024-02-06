@@ -67,7 +67,6 @@ namespace object_oriented_design
             get { return dateOpened; }
             set { dateOpened = value; }
         }
-
         public int NumOrders
         {
             get { return numOrders; }
