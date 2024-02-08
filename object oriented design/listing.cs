@@ -27,7 +27,7 @@ namespace object_oriented_design
         int quantity;
         double discount;
         bool activeStatus;
-        DateTime dateSold;
+        DateTime? dateSold;
 
         //Constructor
         public Listing(bool activestatus, DateTime? datesold)
@@ -39,7 +39,7 @@ namespace object_oriented_design
             quantity = 0;
             discount = 0;
             activeStatus = activestatus;
-            if (activeStatus)
+            if (!activeStatus)
             {
                 dateSold = datesold;
             }
@@ -85,7 +85,7 @@ namespace object_oriented_design
         {
             quantity--;
         }
-        public double ApplyDiscount()
+        private double ApplyDiscount()
         {
             price *= 1 - discount;
             return price;
